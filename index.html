@@ -4,13 +4,20 @@
     <script src="core.js"></script>
 </head>
 <body id="body">
-    <h1>Needleman-Wunsch Calculator</h1>
+    <h1>Needleman-Wunsch and Needle Calculator</h1>
     <p>Sequence 1</p>
     <input type="text" id ="seq1">
     <p>Sequence 2</p>
     <input type="text" id ="seq2">
+    <p>Match score</p>
+    <input type="text" id ="Match" value="1">
+    <p>Mismatch penalty</p>
+    <input type="text" id ="Mismatch" value="-1">
+    <p>Gap penalty</p>
+    <input type="text" id ="Gap" value="-1">
     <br>
-    <button onclick="initialize()">Calculate</button>
+    <button onclick="initialize('needle')">Needleman-Wunsch</button>
+    <button onclick="initialize('water')">Smith-Waterman</button>
     <h3>Score table</h3>
     <table id="score">
     </table>
