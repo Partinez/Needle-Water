@@ -1,10 +1,3 @@
-var tableCreated = 0;
-
-var Seq1 = 'ATACT';
-var Seq2 = 'TACTG';
-var Gap = -1;
-var Mismatch = -1;
-var Match = 1;
 
 
 function createtable(type, size1, size2) {
@@ -57,7 +50,7 @@ function getCell(row,col, table) {
 }
 
 
-function calCell(row, col) {
+function calCell(row, col, method) {
     var fromTop = parseInt(getCell(row-1,col,'score')) + Gap;
     var fromLeft = parseInt(getCell(row,col-1,'score')) + Gap;
     if (getCell(0,col,'score') == getCell(row,0,'score')) {
@@ -67,6 +60,13 @@ function calCell(row, col) {
     else {
         var fromTopLeft = parseInt(getCell(row-1,col-1,'score')) + Mismatch;
     }
+    
+    if (method == 'water') {
+        fromTop = Math.max(fromTop,0);
+        fromLeft = Math.max(fromLeft,0);
+        fromTopLeft = Math.max(fromTopLeft,0);
+    }
+    
     var THighest = false;
     var LHighest = false;
     var TLHiguest = false;
@@ -115,8 +115,10 @@ function calCells(Size1,Size2) {
 }
 
 
-function initialize() {
- 
+function initialize(method) {
+    Gap = parseInt(document.getElementById("Gap").value);
+    Match = parseInt(document.getElementById("Match").value);
+    Mismatch = parseInt(document.getElementById("Mismatch").value);
     var Seq1 = document.getElementById("seq1").value;
     var Seq2 = document.getElementById("seq2").value;
     var Size1 = Seq1.length;
@@ -125,8 +127,7 @@ function initialize() {
     createtable('trace', Size1, Size2);
 
     setSequences(Seq1,Seq2);
-    setGaps(Size1,Size2);
-    console.log('Gapsset');
-    calCells(Size1,Size2);
+    if (method == 'needle') { setGaps(Size1,Size2); }
+    calCells(Size1,Size2, method);
     
 }
