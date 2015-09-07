@@ -104,7 +104,7 @@ function setGaps(Size1,Size2) {
     
 }
     
-function calCells(Size1,Size2) {
+function calCells(Size1,Size2, method) {
     for (var row = 2; row <= Size2+1; row++) {
         for (var col = 2; col <= Size1+1; col++) {
             calCell(row,col);
