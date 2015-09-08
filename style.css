@@ -10,8 +10,10 @@ td {
   font-weight: bold;
   background-color:#16a085;
 }
-table {
+table.center {
   border-collapse: collapse;  
   background-color: #1abc9c;
   padding: 15px;
+  margin-left: auto;
+  margin-right:auto;
 }
