@@ -51,6 +51,7 @@ function getCell(row,col, table) {
 
 
 function calCell(row, col, method) {
+    console.log(method);
     var fromTop = parseInt(getCell(row-1,col,'score')) + Gap;
     var fromLeft = parseInt(getCell(row,col-1,'score')) + Gap;
     if (getCell(0,col,'score') == getCell(row,0,'score')) {
