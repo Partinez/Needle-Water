@@ -25,5 +25,7 @@ table.center {
 }
 
 .inputd {
-  text-align:justify;
+  text-align: right;
+  margin:auto;
+  width: 400px;
 }
