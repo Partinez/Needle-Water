@@ -13,6 +13,7 @@ function createtable(type, size1, size2) {
             for (var j = 0; j <= size1+1; j++) {
                 
                 var cell = document.createElement('td');
+                if ((i <= 1) || (j <= 1)) { cell.setAttribute("class","header") }
                 cell.appendChild(document.createTextNode("0"));
                 cell.id = type + parseInt(i) +"_" + parseInt(j);
                 row.appendChild(cell);
