@@ -83,9 +83,9 @@ function calCell(row, col, method) {
         setCell(row,col,'score',fromTopLeft);
     }
     var trace = '';
-    if (THighest) { trace = trace + '&#8593'}
-    if (LHighest) { trace = trace + '&#8592'}
-    if (TLHighest) { trace = trace + '&#8598'}
+    if (THighest) { trace = trace + '&#8593;'}
+    if (LHighest) { trace = trace + '&#8592;'}
+    if (TLHighest) { trace = trace + '&#8598;'}
     setCell(row,col,'trace',trace);
 }
     
