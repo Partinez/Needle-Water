@@ -2,4 +2,10 @@ td {
   height: 35px;
   width: 35px;
   text-align: center;
+  background-color: #1abc9c;
+}
+
+.header {
+  font-weight: bold;
+  background-color:#16a085;
 }
