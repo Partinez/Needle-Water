@@ -22,7 +22,7 @@ function createtable(type, size1, size2) {
         }
         
         
-        table.appendChild(tbody);
+        table.replaceChild(tbody,table.childNodes[0]);
 }
 
 function setCell(row, col, table, text) {
