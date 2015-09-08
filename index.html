@@ -6,23 +6,18 @@
 </head>
 <body id="body">
     <h1>Needleman-Wunsch and Smith-Waterman Calculator</h1>
-    <p>Sequence 1</p>
-    <input type="text" id ="seq1">
-    <p>Sequence 2</p>
-    <input type="text" id ="seq2">
-    <p>Match score</p>
-    <input type="text" id ="Match" value="1">
-    <p>Mismatch penalty</p>
-    <input type="text" id ="Mismatch" value="-1">
-    <p>Gap penalty</p>
-    <p><input type="text" id ="Gap" value="-1"></p>
+    <p>First sequence:  <input type="text" id ="seq1"></p>
+    <p>Second sequence:   <input type="text" id ="seq2"></p>
+    <p>Match score: <input type="text" id ="Match" value="1"></p>
+    <p>Mismatch penalty: <input type="text" id ="Mismatch" value="-1"></p>
+    <p>Gap penalty: <input type="text" id ="Gap" value="-1"></p>
     <button onclick="initialize('needle')">Needleman-Wunsch</button>
     <button onclick="initialize('water')">Smith-Waterman</button>
     <h3>Score table</h3>
-    <table id="score">
+    <table id="score" class="center">
     </table>
     <br>
     <h3>Traceback table</h3>
-    <table id="trace">
+    <table id="trace" class="center">
     </table>
 </body>
