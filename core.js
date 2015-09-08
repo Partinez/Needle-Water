@@ -93,12 +93,12 @@ function setGaps(Size1,Size2) {
     for (var i = 0; i <= Size1-1; i++) {
         var left = parseInt(getCell(1,i+1,'score'))
         setCell(1,i+2,'score', left + Gap);
-        setCell(1,i+2,'trace','L');
+        setCell(1,i+2,'trace',String.fromCharCode(8592));
     }
     for (var i = 0; i <= Size2-1; i++) {
         var top = parseInt(getCell(i+1,1,'score'))
         setCell(i+2,1,'score', top + Gap);
-        setCell(i+2,1,'trace', 'T');
+        setCell(i+2,1,'trace', String.fromCharCode(8593));
     }
     
     
