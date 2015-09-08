@@ -24,7 +24,7 @@ table.center {
   margin-right:auto;
 }
 
-.inputd {
+#inputd {
   text-align: right;
   margin:auto;
   width: 400px;
