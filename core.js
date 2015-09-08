@@ -45,13 +45,11 @@ function setSequences(sequence1, sequence2) {
 }
 
 function getCell(row,col, table) {
-    console.log(table + parseInt(row) + "_" + parseInt(col));
     return document.getElementById(table + parseInt(row) + "_" + parseInt(col)).innerHTML;
 }
 
 
 function calCell(row, col, method) {
-    console.log(method);
     var fromTop = parseInt(getCell(row-1,col,'score')) + Gap;
     var fromLeft = parseInt(getCell(row,col-1,'score')) + Gap;
     if (getCell(0,col,'score') == getCell(row,0,'score')) {
@@ -108,7 +106,7 @@ function setGaps(Size1,Size2) {
 function calCells(Size1,Size2, method) {
     for (var row = 2; row <= Size2+1; row++) {
         for (var col = 2; col <= Size1+1; col++) {
-            calCell(row,col);
+            calCell(row,col, method);
             
             
         }
