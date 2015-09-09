@@ -50,6 +50,12 @@ function setCell(row, col, table, text) {
 }
 
 function setSequences(sequence1, sequence2) {
+    setCell(0,1,'score','Seq1');
+    setCell(0,1,'trace'','Seq1');
+    setCell(1,0,'score','Seq2');
+    setCell(1,0,'trace','Seq2');
+    setCell(0,0,'score',' ');
+    setCell(0,0,'trace',' ');
     for (var i = 0; i <= sequence1.length-1; i++) {
         setCell(0,i+2,'score',sequence1[i]);
         setCell(0,i+2,'trace',sequence1[i]);
@@ -152,7 +158,6 @@ function initialize(method) {
     createtable('trace', Size1, Size2);
 
     setSequences(Seq1,Seq2);
-    setCell(1,1,'score','0');
     if (method == 'needle') { setGaps(Size1,Size2); }
     calCells(Size1,Size2, method);
     
