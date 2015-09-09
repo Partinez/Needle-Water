@@ -115,7 +115,14 @@ function calCells(Size1,Size2, method) {
 }
 
 
+function insertTitles() {
+    document.getElementById("scoretitle").innerHTML = "Score Table";
+    document.getElementById("tracetitle").innerHTML = "Traceback Table";
+}
+
+
 function initialize(method) {
+    insertTitles();
     Gap = parseInt(document.getElementById("Gap").value);
     Match = parseInt(document.getElementById("Match").value);
     Mismatch = parseInt(document.getElementById("Mismatch").value);
