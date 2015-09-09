@@ -31,8 +31,8 @@ function createtable(type, size1, size2) {
             }
         }
         
-        
-        table.replaceChild(tbody,table.childNodes[0]);
+        table.appendChild(thead);
+        table.appendChild(tbody);
 }
 
 function setCell(row, col, table, text) {
