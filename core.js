@@ -19,7 +19,7 @@ function createtable(type, size1, size2) {
                         var cell = document.createElement('td');
                 }
                 
-                cell.appendChild(document.createTextNode("0"));
+                cell.appendChild(document.createTextNode(""));
                 cell.id = type + parseInt(i) +"_" + parseInt(j);
                 row.appendChild(cell);
             }
@@ -30,7 +30,8 @@ function createtable(type, size1, size2) {
                 tbody.appendChild(row);  
             }
         }
-        
+        table.removeChild(table.childNodes[0]);
+        table.removeChild(table.childNodes[0]);
         table.appendChild(thead);
         table.appendChild(tbody);
 }
