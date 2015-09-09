@@ -17,9 +17,10 @@ function createtable(type, size1, size2) {
                         var cell = document.createElement('th');
                 } else {
                         var cell = document.createElement('td');
+                        cell.appendChild(document.createTextNode("0"));
                 }
                 
-                cell.appendChild(document.createTextNode(""));
+                
                 cell.id = type + parseInt(i) +"_" + parseInt(j);
                 row.appendChild(cell);
             }
