@@ -50,11 +50,9 @@ h1 {
 
 .header {
   font-weight: bold;
-  background-color:#2980b9;
 }
 table.center {
   border-collapse: collapse;  
-  background-color: #3498db;
   padding: 15px;
   margin-left: auto;
   margin-right:auto;
