@@ -51,7 +51,7 @@ function setCell(row, col, table, text) {
 
 function setSequences(sequence1, sequence2) {
     setCell(0,1,'score','Seq1');
-    setCell(0,1,'trace'','Seq1');
+    setCell(0,1,'trace','Seq1');
     setCell(1,0,'score','Seq2');
     setCell(1,0,'trace','Seq2');
     setCell(0,0,'score',' ');
