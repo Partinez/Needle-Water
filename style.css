@@ -9,12 +9,12 @@ td {
 body {
 
   font-family: "Verdana", sans-serif;
-
+  background-color: #2ecc71;
 }
 
 #content {
   margin-top: 100px;
-  background-color: #2ecc71;
+
 }
 
 
@@ -42,11 +42,11 @@ h1 {
 
 .header {
   font-weight: bold;
-  background-color:#27ae60;
+  background-color:#2980b9;
 }
 table.center {
   border-collapse: collapse;  
-  background-color: #2ecc71;
+  background-color: #3498db;
   padding: 15px;
   margin-left: auto;
   margin-right:auto;
