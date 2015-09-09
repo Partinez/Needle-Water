@@ -30,8 +30,10 @@ function createtable(type, size1, size2) {
                 tbody.appendChild(row);  
             }
         }
-        table.removeChild(table.childNodes[0]);
-        table.removeChild(table.childNodes[0]);
+        if (table.hasChildNodes()) {
+	    table.removeChild(table.childNodes[0]);
+            table.removeChild(table.childNodes[0]);
+        }
         table.appendChild(thead);
         table.appendChild(tbody);
 }
