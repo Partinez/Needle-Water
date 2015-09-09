@@ -15,7 +15,7 @@ function createtable(type, size1, size2) {
                 
                 if ((i == 0) || (j == 0)) { 
                         var cell = document.createElement('th');
-                        cell.appendChild(document.createTextNode(" "));
+                        cell.appendChild(document.createTextNode("0"));
                 } else {
                         var cell = document.createElement('td');
                         cell.appendChild(document.createTextNode("0"));
