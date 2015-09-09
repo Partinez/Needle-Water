@@ -105,7 +105,7 @@ function calCell(row, col, method) {
 }
     
 function setGaps(Size1,Size2) {
-    setCell(1,1,'score','0');
+    
     for (var i = 0; i <= Size1-1; i++) {
         var left = parseInt(getCell(1,i+1,'score'))
         setCell(1,i+2,'score', left + Gap);
@@ -150,6 +150,7 @@ function initialize(method) {
     createtable('trace', Size1, Size2);
 
     setSequences(Seq1,Seq2);
+    setCell(1,1,'score','0');
     if (method == 'needle') { setGaps(Size1,Size2); }
     calCells(Size1,Size2, method);
     
