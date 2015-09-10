@@ -150,39 +150,14 @@ function insertTitles() {
 }
 
 
-function initialize(method) {
-    //method is either 'needle' or 'water', given by the button onclick action.
-    insertTitles(); //To show Table titles.
-    
-    //Gather input.
-    Gap = parseInt(document.getElementById("Gap").value);
-    Match = parseInt(document.getElementById("Match").value);
-    Mismatch = parseInt(document.getElementById("Mismatch").value);
-    
-    var Seq1 = document.getElementById("seq1").value;
-    var Seq2 = document.getElementById("seq2").value;
-    var Size1 = Seq1.length;
-    var Size2 = Seq2.length;
-    
-    //Create both tables, filled with '0' in each cell.
-    createtable('score', Size1, Size2);
-    createtable('trace', Size1, Size2);
-    
-    //Places the sequences in the table headers. 
-    setSequences(Seq1,Seq2);
-    
-    //Fills Gap row and column on both tables.
-    setGaps(Size1,Size2, method);
-    
-    //Calculates and fills each cell.
-    calCells(Size1,Size2, method);
-    
-}
 
 
+my_function = null;
 
 //jquery code from tympanus.net
 $(function(){
+	
+	function headerupdate() {
 	$('table').each(function() {
 		if($(this).find('thead').length > 0 && $(this).find('th').length > 0) {
 			// Clone <thead>
@@ -330,4 +305,37 @@ $(function(){
 			.scroll($.throttle(250, repositionStickyHead));
 		}
 	});
+	}
+	my_function = headerupdate;
 });
+
+function initialize(method) {
+    //method is either 'needle' or 'water', given by the button onclick action.
+    insertTitles(); //To show Table titles.
+    
+    //Gather input.
+    Gap = parseInt(document.getElementById("Gap").value);
+    Match = parseInt(document.getElementById("Match").value);
+    Mismatch = parseInt(document.getElementById("Mismatch").value);
+    
+    var Seq1 = document.getElementById("seq1").value;
+    var Seq2 = document.getElementById("seq2").value;
+    var Size1 = Seq1.length;
+    var Size2 = Seq2.length;
+    
+    //Create both tables, filled with '0' in each cell.
+    createtable('score', Size1, Size2);
+    createtable('trace', Size1, Size2);
+    
+    //Places the sequences in the table headers. 
+    setSequences(Seq1,Seq2);
+    
+    //Fills Gap row and column on both tables.
+    setGaps(Size1,Size2, method);
+    
+    //Calculates and fills each cell.
+    calCells(Size1,Size2, method);
+    
+    my_function() //Update moving header
+    
+}
