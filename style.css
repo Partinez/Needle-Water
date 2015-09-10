@@ -7,7 +7,12 @@ body {
   background-color: white;
 }
 
-
+.score0_0 {
+	background-color:#666;
+}
+.trace0_0 {
+	background-color:#666;
+}
 
 #content {
   margin-top: 100px;
